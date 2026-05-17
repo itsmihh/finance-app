@@ -47,7 +47,7 @@ export default function HomeScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>FinanceApp</Text>
+            <Text style={styles.title}>Minhas Finanças</Text>
 
             <View style={styles.card}>
                 <Text style={styles.label}>Total gasto</Text>
@@ -86,12 +86,12 @@ export default function HomeScreen({ navigation }) {
                             {item.descricao}
                         </Text>
 
-                        <Text>
+                        <Text style={styles.expenseCategory}>
                             {item.categoria}
                         </Text>
 
                         <Text>
-                            R$ {item.valor}
+                            R${item.valor}
                         </Text>
 
                         <Text>
@@ -107,9 +107,9 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#f5f5f5",
+        backgroundColor: "#fbf6f2",
         padding: 20,
-        paddingTop: 60,
+        paddingTop: 30,
     },
 
     title: {
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: "bold",
         marginTop: 10,
-        color: "green",
+        color: "#132436",
     },
 
     expenseItem: {
@@ -146,11 +146,16 @@ const styles = StyleSheet.create({
 
     expenseTitle: {
         fontWeight: "bold",
-        fontSize: 16,
+        fontSize: 18,
+    },
+
+    expenseCategory: {
+        color: "#9381ff",
+        fontWeight: 500
     },
 
     addButton: {
-        backgroundColor: "green",
+        backgroundColor: "#9c90fc",
         padding: 15,
         borderRadius: 10,
         alignItems: "center",
